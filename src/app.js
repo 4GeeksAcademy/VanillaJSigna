@@ -1,11 +1,19 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+window.onload = function () {
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  let who = ['A two headed pinecone', 'My dog', 'A crazy monkey', 'An alien'];
+  let action = ['yelled at', 'ate', 'destroyed', 'stole'];
+  let what = ['my sandwich', 'my homework', 'my phone'];
+  let when = ['in my house', 'before class', 'while I was sleeping'];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  function random(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  let excuse =
+    random(who) + " " +
+    random(action) + " " +
+    random(what) + " " +
+    random(when);
+
+  document.getElementById("excuse").innerHTML = excuse;
 };
